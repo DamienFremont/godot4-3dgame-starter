@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c1oardomoukyr"]
+
+[ext_resource type="Texture2D" uid="uid://b44m06oo5x5sy" path="res://assets/models/MI_Grid_TopDark-1024.png" id="1_76f4f"]
+
+[resource]
+albedo_texture = ExtResource("1_76f4f")
+uv1_triplanar = true
+uv1_world_triplanar = true
