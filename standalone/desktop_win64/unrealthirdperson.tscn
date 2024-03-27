@@ -1,0 +1,109 @@
+[gd_scene load_steps=4 format=3 uid="uid://djluuvy3rr75r"]
+
+[ext_resource type="ArrayMesh" uid="uid://bh4ysa1ytgsbd" path="res://assets/models/SM_Cube.obj" id="1_b6tcw"]
+[ext_resource type="ArrayMesh" uid="uid://wbrhe4sat610" path="res://assets/models/SM_QuarterCylinder.obj" id="2_e6wsv"]
+[ext_resource type="ArrayMesh" uid="uid://hn7grxn7y7rr" path="res://assets/models/SM_Ramp.obj" id="3_pguqf"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Block01" type="Node" parent="."]
+
+[node name="SM_Cube4" type="MeshInstance3D" parent="Block01"]
+transform = Transform3D(6, 0, 0, 0, 2, 0, 0, 0, 5, 12, 0, 17)
+mesh = ExtResource("1_b6tcw")
+skeleton = NodePath("../..")
+
+[node name="SM_Cube7" type="MeshInstance3D" parent="Block01"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 1, 13, 0, 22)
+mesh = ExtResource("1_b6tcw")
+
+[node name="SM_Cube9" type="MeshInstance3D" parent="Block01"]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 7, 18, 0, 15)
+mesh = ExtResource("1_b6tcw")
+skeleton = NodePath("../SM_Cube7")
+
+[node name="SM_Cube10" type="MeshInstance3D" parent="Block01"]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 1, 18, 1, 21)
+mesh = ExtResource("1_b6tcw")
+skeleton = NodePath("../SM_Cube9")
+
+[node name="SM_QuarterCylinder3" type="MeshInstance3D" parent="Block01"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 15, 0, 22)
+mesh = ExtResource("2_e6wsv")
+skeleton = NodePath("../..")
+
+[node name="SM_QuarterCylinder6" type="MeshInstance3D" parent="Block01"]
+transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 13, 0, 22)
+mesh = ExtResource("2_e6wsv")
+
+[node name="SM_Ramp2" type="MeshInstance3D" parent="Block01"]
+transform = Transform3D(-8.74228e-08, 0, -4, 0, 1, 0, 2, 0, -1.74846e-07, 18, 0, 15)
+mesh = ExtResource("3_pguqf")
+skeleton = NodePath("../..")
+
+[node name="SM_Ramp3" type="MeshInstance3D" parent="Block01"]
+transform = Transform3D(-2, 0, 6.03983e-07, 0, 1, 0, -3.01992e-07, 0, -4, 20, 1, 21)
+mesh = ExtResource("3_pguqf")
+
+[node name="Cylinder" type="Node" parent="."]
+
+[node name="SM_QuarterCylinder11" type="MeshInstance3D" parent="Cylinder"]
+transform = Transform3D(4, 0, 0, 0, 1, 0, 0, 0, 4, 22, 0, 7)
+mesh = ExtResource("2_e6wsv")
+
+[node name="SM_QuarterCylinder12" type="MeshInstance3D" parent="Cylinder"]
+transform = Transform3D(-1.74846e-07, 0, -4, 0, 1, 0, 4, 0, -1.74846e-07, 22, 0, 7)
+mesh = ExtResource("2_e6wsv")
+skeleton = NodePath("../SM_QuarterCylinder11")
+
+[node name="SM_QuarterCylinder13" type="MeshInstance3D" parent="Cylinder"]
+transform = Transform3D(-4, 0, -3.49691e-07, 0, 1, 0, 3.49691e-07, 0, -4, 22, 0, 7)
+mesh = ExtResource("2_e6wsv")
+skeleton = NodePath("../SM_QuarterCylinder12")
+
+[node name="SM_QuarterCylinder14" type="MeshInstance3D" parent="Cylinder"]
+transform = Transform3D(4.76995e-08, 0, 4, 0, 1, 0, -4, 0, 4.76995e-08, 22, 0, 7)
+mesh = ExtResource("2_e6wsv")
+skeleton = NodePath("../SM_QuarterCylinder13")
+
+[node name="Lighting" type="Node" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lighting"]
+transform = Transform3D(0.388236, -0.482937, 0.784886, 0.23457, 0.875426, 0.422618, -0.891207, 0.0200349, 0.453154, 0, 9, 0)
+
+[node name="Playground" type="Node" parent="."]
+
+[node name="SM_Cube" type="MeshInstance3D" parent="Playground"]
+transform = Transform3D(30, 0, 0, 0, 0.5, 0, 0, 0, 35, 0, -0.5, 0)
+mesh = ExtResource("1_b6tcw")
+skeleton = NodePath("../..")
+
+[node name="SM_Cube2" type="MeshInstance3D" parent="Playground"]
+transform = Transform3D(30, 0, 0, 0, 4, 0, 0, 0, 1, 0, 0, 0)
+mesh = ExtResource("1_b6tcw")
+skeleton = NodePath("../..")
+
+[node name="SM_Cube3" type="MeshInstance3D" parent="Playground"]
+transform = Transform3D(30, 0, 0, 0, 4, 0, 0, 0, 1, 0, 0, 34)
+mesh = ExtResource("1_b6tcw")
+skeleton = NodePath("../..")
+
+[node name="SM_Cube5" type="MeshInstance3D" parent="Playground"]
+transform = Transform3D(-1.44248e-06, 0, -1, 0, 4, 0, 33, 0, -4.37114e-08, 1, 0, 1)
+mesh = ExtResource("1_b6tcw")
+skeleton = NodePath("../..")
+
+[node name="SM_Cube6" type="MeshInstance3D" parent="Playground"]
+transform = Transform3D(-1.44248e-06, 0, -1, 0, 4, 0, 33, 0, -4.37114e-08, 30, 0, 1)
+mesh = ExtResource("1_b6tcw")
+skeleton = NodePath("../..")
+
+[node name="PlayerStart" type="Node" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="PlayerStart"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9, 1, 11)
+
+[node name="SM_Ramp" type="MeshInstance3D" parent="."]
+transform = Transform3D(-8.74228e-08, 0, -4, 0, 0.3, 0, 2, 0, -1.74846e-07, 17, 0, 6)
+mesh = ExtResource("3_pguqf")
+skeleton = NodePath("../Block01")

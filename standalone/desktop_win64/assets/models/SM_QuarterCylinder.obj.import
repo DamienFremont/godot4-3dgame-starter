@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://wbrhe4sat610"
+path="res://.godot/imported/SM_QuarterCylinder.obj-c4e57622abebd735ca7370c7e3794a03.mesh"
+
+[deps]
+
+files=["res://.godot/imported/SM_QuarterCylinder.obj-c4e57622abebd735ca7370c7e3794a03.mesh"]
+
+source_file="res://assets/models/SM_QuarterCylinder.obj"
+dest_files=["res://.godot/imported/SM_QuarterCylinder.obj-c4e57622abebd735ca7370c7e3794a03.mesh", "res://.godot/imported/SM_QuarterCylinder.obj-c4e57622abebd735ca7370c7e3794a03.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
