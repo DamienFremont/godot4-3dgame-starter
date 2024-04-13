@@ -30,66 +30,74 @@
 ## Features
 
 - Targets:
-  - [ ] Win64 (Windows)
+  - [x] Win64 (Windows)
 - Graphics
-  - [ ] Render: 
-      [ ] PostProcessing
-      [ ] Texture tiling
-  - [ ] Camera: 
-      [ ] ThirdPerson
-  - [ ] Lighting: Real Time, Player Shadows
-  - [ ] Meshes: 
-      [ ] Meshes
-      [ ] Textures
-      [ ] Shaders
-      [ ] Materials
-  - [ ] Sky: Color, Cubemap, Fog
+  - :hourglass: Render: [ ] PostProcessing Bloom, Filter FSR2
+  - [ ] Camera: ThirdPerson
+  - :hourglass: Lighting: Real Time, [ ] Player Shadows
+  - [x] Meshes: Meshes, Textures, Shaders, Materials
+  - :hourglass: Sky: Color, Cubemap, [ ] Fog
 - World
-  - [ ] Physics
-      [ ] hitbox
-      [ ] gravity
+  - [ ] Physics: [ ] hitbox, [ ] gravity
+  - [ ] Simulation: Tick Systems
 - Scripting
-  - [ ] Properties: 
-      [ ] code 
   - [ ] Console
 - Animation
   - [ ] Character
 - Input
-  - [ ] UI: 
-      [ ] lauch screen
-      [ ] settings menu
-      [ ] translations i18n
-  - [ ] Control:
-      [ ] Keyboard
-      [ ] Tank control
+  - [ ] UI: lauch screen, settings menu
+  - [ ] Control: Keyboard, Tank control
 - Other
-  - [ ] launching screen
+  - [x] launching screen
 
 Repository layout:
 ```
 ├── assets
-│   ├── i18n
 │   └── images
 │   └── ...
 ├── docs
 ├── standalone
 │   ├── desktop_win64
 └── tools
-│   └── blender
+│   └── ci
 ```
 
 ## Install
 
 ### Windows
 
-TODO
+1. [Download Godot 4 for Windows](https://godotengine.org/download/windows/)
+2. Unzip Godot
+
+### CI
+
+Add Godot to classpath
+
+![alt text](./docs/README/install-win-path-1.png)
+
+![alt text](./docs/README/install-win-path-2.png)
+
+![alt text](./docs/README/install-win-path-3.png)
 
 ## Usage
 
 ### Windows
 
-TODO
+1. Start Godot.exe
+2. Import > `godot4-3dgame-starter`
+
+### CLI
+
+- Pros: basic, no Editor, CI friendly.
+- Cons: manual actions intensive.
+
+```powershell
+.\tools\ci\release.bat
+```
 
 ## Resources
 
 - Godot
+  - [Command line tutorial](https://docs.godotengine.org/en/stable/tutorials/editor/command_line_tutorial.html#exporting)
+  - Youtube
+    - [Cheap Sky from AI-Generated (or Any Other) Image in 5 Min / Godot Tutorial](https://www.youtube.com/watch?v=ie-D7q7zczY)
