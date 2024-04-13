@@ -14,3 +14,7 @@ config/name="godot4-3dgame-starter"
 run/main_scene="res://unrealthirdperson.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/vsync/vsync_mode=0
