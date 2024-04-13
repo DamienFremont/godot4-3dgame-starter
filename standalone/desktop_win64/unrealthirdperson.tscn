@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://djluuvy3rr75r"]
+[gd_scene load_steps=11 format=3 uid="uid://djluuvy3rr75r"]
 
 [ext_resource type="ArrayMesh" uid="uid://bh4ysa1ytgsbd" path="res://assets/models/SM_Cube.obj" id="1_b6tcw"]
 [ext_resource type="Texture2D" uid="uid://nq2jvo155vxh" path="res://assets/images/skybox-panorama.jpg" id="1_eakgw"]
+[ext_resource type="Script" path="res://unrealthirdperson.gd" id="1_nrdd0"]
 [ext_resource type="ArrayMesh" uid="uid://wbrhe4sat610" path="res://assets/models/SM_QuarterCylinder.obj" id="2_e6wsv"]
 [ext_resource type="ArrayMesh" uid="uid://hn7grxn7y7rr" path="res://assets/models/SM_Ramp.obj" id="3_pguqf"]
 [ext_resource type="Material" uid="uid://cchdjprgwwgv" path="res://materials/MI_Grid_Gray.tres" id="5_c3sub"]
@@ -17,132 +18,166 @@ sky_material = SubResource("PanoramaSkyMaterial_ynso4")
 background_mode = 2
 sky = SubResource("Sky_1yna8")
 
-[node name="Node3D" type="Node3D"]
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nrdd0")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="Help" type="Label" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 542.0
+offset_right = 554.0
+offset_bottom = 632.0
+text = "This text will always render at the native resolution.
+Press Space to adjust the 3D viewport's resolution scaling.
+Press Enter to cycle filtering modes."
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 212.0
+offset_bottom = 76.0
+
+[node name="Scale" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Scale: 100%"
+
+[node name="Filter" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Scaling 3D Mode: Bilinear"
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Node3D"]
 environment = SubResource("Environment_u6hcj")
 
-[node name="Block01" type="Node" parent="."]
+[node name="Block01" type="Node" parent="Node3D"]
 
-[node name="SM_Cube4" type="MeshInstance3D" parent="Block01"]
+[node name="SM_Cube4" type="MeshInstance3D" parent="Node3D/Block01"]
 transform = Transform3D(6, 0, 0, 0, 2, 0, 0, 0, 5, 12, 0, 17)
 material_override = ExtResource("5_jpgsx")
 mesh = ExtResource("1_b6tcw")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 surface_material_override/0 = ExtResource("5_jpgsx")
 
-[node name="SM_Cube7" type="MeshInstance3D" parent="Block01"]
+[node name="SM_Cube7" type="MeshInstance3D" parent="Node3D/Block01"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 1, 13, 0, 22)
 material_override = ExtResource("5_jpgsx")
 mesh = ExtResource("1_b6tcw")
 
-[node name="SM_Cube9" type="MeshInstance3D" parent="Block01"]
+[node name="SM_Cube9" type="MeshInstance3D" parent="Node3D/Block01"]
 transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 7, 18, 0, 15)
 material_override = ExtResource("5_jpgsx")
 mesh = ExtResource("1_b6tcw")
 skeleton = NodePath("../SM_Cube7")
 
-[node name="SM_Cube10" type="MeshInstance3D" parent="Block01"]
+[node name="SM_Cube10" type="MeshInstance3D" parent="Node3D/Block01"]
 transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 1, 18, 1, 21)
 material_override = ExtResource("5_jpgsx")
 mesh = ExtResource("1_b6tcw")
 skeleton = NodePath("../SM_Cube9")
 
-[node name="SM_QuarterCylinder3" type="MeshInstance3D" parent="Block01"]
+[node name="SM_QuarterCylinder3" type="MeshInstance3D" parent="Node3D/Block01"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 15, 0, 22)
 material_override = ExtResource("5_jpgsx")
 mesh = ExtResource("2_e6wsv")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 
-[node name="SM_QuarterCylinder6" type="MeshInstance3D" parent="Block01"]
+[node name="SM_QuarterCylinder6" type="MeshInstance3D" parent="Node3D/Block01"]
 transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 13, 0, 22)
 material_override = ExtResource("5_jpgsx")
 mesh = ExtResource("2_e6wsv")
 
-[node name="SM_Ramp2" type="MeshInstance3D" parent="Block01"]
+[node name="SM_Ramp2" type="MeshInstance3D" parent="Node3D/Block01"]
 transform = Transform3D(-8.74228e-08, 0, -4, 0, 1, 0, 2, 0, -1.74846e-07, 18, 0, 15)
 material_override = ExtResource("5_jpgsx")
 mesh = ExtResource("3_pguqf")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 surface_material_override/0 = ExtResource("5_jpgsx")
 
-[node name="SM_Ramp3" type="MeshInstance3D" parent="Block01"]
+[node name="SM_Ramp3" type="MeshInstance3D" parent="Node3D/Block01"]
 transform = Transform3D(-2, 0, 6.03983e-07, 0, 1, 0, -3.01992e-07, 0, -4, 20, 1, 21)
 material_override = ExtResource("5_jpgsx")
 mesh = ExtResource("3_pguqf")
 surface_material_override/0 = ExtResource("5_jpgsx")
 
-[node name="Cylinder" type="Node" parent="."]
+[node name="Cylinder" type="Node" parent="Node3D"]
 
-[node name="SM_QuarterCylinder11" type="MeshInstance3D" parent="Cylinder"]
+[node name="SM_QuarterCylinder11" type="MeshInstance3D" parent="Node3D/Cylinder"]
 transform = Transform3D(4, 0, 0, 0, 1, 0, 0, 0, 4, 22, 0, 7)
 material_override = ExtResource("5_jpgsx")
 mesh = ExtResource("2_e6wsv")
 
-[node name="SM_QuarterCylinder12" type="MeshInstance3D" parent="Cylinder"]
+[node name="SM_QuarterCylinder12" type="MeshInstance3D" parent="Node3D/Cylinder"]
 transform = Transform3D(-1.74846e-07, 0, -4, 0, 1, 0, 4, 0, -1.74846e-07, 22, 0, 7)
 material_override = ExtResource("5_jpgsx")
 mesh = ExtResource("2_e6wsv")
 skeleton = NodePath("../SM_QuarterCylinder11")
 surface_material_override/0 = ExtResource("5_jpgsx")
 
-[node name="SM_QuarterCylinder13" type="MeshInstance3D" parent="Cylinder"]
+[node name="SM_QuarterCylinder13" type="MeshInstance3D" parent="Node3D/Cylinder"]
 transform = Transform3D(-4, 0, -3.49691e-07, 0, 1, 0, 3.49691e-07, 0, -4, 22, 0, 7)
 material_override = ExtResource("5_jpgsx")
 mesh = ExtResource("2_e6wsv")
 skeleton = NodePath("../SM_QuarterCylinder12")
 surface_material_override/0 = ExtResource("5_jpgsx")
 
-[node name="SM_QuarterCylinder14" type="MeshInstance3D" parent="Cylinder"]
+[node name="SM_QuarterCylinder14" type="MeshInstance3D" parent="Node3D/Cylinder"]
 transform = Transform3D(4.76995e-08, 0, 4, 0, 1, 0, -4, 0, 4.76995e-08, 22, 0, 7)
 material_override = ExtResource("5_jpgsx")
 mesh = ExtResource("2_e6wsv")
 skeleton = NodePath("../SM_QuarterCylinder13")
 
-[node name="Lighting" type="Node" parent="."]
+[node name="Lighting" type="Node" parent="Node3D"]
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lighting"]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Node3D/Lighting"]
 transform = Transform3D(0.388236, -0.482937, 0.784885, 0.23457, 0.875426, 0.422619, -0.891207, 0.0200348, 0.453154, 0, 9, 39)
 
-[node name="Playground" type="Node" parent="."]
+[node name="Playground" type="Node" parent="Node3D"]
 
-[node name="SM_Cube" type="MeshInstance3D" parent="Playground"]
+[node name="SM_Cube" type="MeshInstance3D" parent="Node3D/Playground"]
 transform = Transform3D(30, 0, 0, 0, 0.5, 0, 0, 0, 35, 0, -0.5, 0)
 material_override = ExtResource("5_c3sub")
 mesh = ExtResource("1_b6tcw")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 surface_material_override/0 = ExtResource("5_c3sub")
 
-[node name="SM_Cube2" type="MeshInstance3D" parent="Playground"]
+[node name="SM_Cube2" type="MeshInstance3D" parent="Node3D/Playground"]
 transform = Transform3D(30, 0, 0, 0, 4, 0, 0, 0, 1, 0, 0, 0)
 mesh = ExtResource("1_b6tcw")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 surface_material_override/0 = ExtResource("5_jpgsx")
 
-[node name="SM_Cube3" type="MeshInstance3D" parent="Playground"]
+[node name="SM_Cube3" type="MeshInstance3D" parent="Node3D/Playground"]
 transform = Transform3D(30, 0, 0, 0, 4, 0, 0, 0, 1, 0, 0, 34)
 material_override = ExtResource("5_jpgsx")
 mesh = ExtResource("1_b6tcw")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 
-[node name="SM_Cube5" type="MeshInstance3D" parent="Playground"]
+[node name="SM_Cube5" type="MeshInstance3D" parent="Node3D/Playground"]
 transform = Transform3D(-1.44248e-06, 0, -1, 0, 4, 0, 33, 0, -4.37114e-08, 1, 0, 1)
 material_override = ExtResource("5_jpgsx")
 mesh = ExtResource("1_b6tcw")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 
-[node name="SM_Cube6" type="MeshInstance3D" parent="Playground"]
+[node name="SM_Cube6" type="MeshInstance3D" parent="Node3D/Playground"]
 transform = Transform3D(-1.44248e-06, 0, -1, 0, 4, 0, 33, 0, -4.37114e-08, 30, 0, 1)
 material_override = ExtResource("5_jpgsx")
 mesh = ExtResource("1_b6tcw")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 
-[node name="PlayerStart" type="Node" parent="."]
+[node name="PlayerStart" type="Node" parent="Node3D"]
 
-[node name="Camera3D" type="Camera3D" parent="PlayerStart"]
+[node name="Camera3D" type="Camera3D" parent="Node3D/PlayerStart"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9, 1, 11)
 
-[node name="SM_Ramp" type="MeshInstance3D" parent="."]
+[node name="SM_Ramp" type="MeshInstance3D" parent="Node3D"]
 transform = Transform3D(-8.74228e-08, 0, -4, 0, 0.3, 0, 2, 0, -1.74846e-07, 17, 0, 6)
 material_override = ExtResource("5_jpgsx")
 mesh = ExtResource("3_pguqf")
