@@ -1,0 +1,24 @@
+# Blender 4.0.2 MTL File: 'Character.blend'
+# www.blender.org
+
+newmtl MI_Quinn_01
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/damien/git/godot4-3dgame-starter/assets/resources/models/Character_diffuse.png
+map_Bump -bm 1.000000 C:/Program Files/Epic Games/temp/render/ttt/Q_tex/baked/T_Quinn_01ID_N.TGA
+
+newmtl MI_Quinn_02
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/damien/git/godot4-3dgame-starter/assets/resources/models/Character_diffuse.png
+map_Bump -bm 1.000000 C:/Program Files/Epic Games/temp/render/ttt/Q_tex/baked/T_Quinn_02ID_N.TGA
