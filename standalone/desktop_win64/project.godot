@@ -11,9 +11,12 @@ config_version=5
 [application]
 
 config/name="godot4-3dgame-starter"
-run/main_scene="res://unrealthirdperson.tscn"
+run/main_scene="res://scenes/unrealthirdperson.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/image="res://assets/splash_screen.png"
 config/icon="res://icon.svg"
+boot_splash/minimum_display_time=1000
 
 [display]
 

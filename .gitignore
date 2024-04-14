@@ -22,3 +22,6 @@ build
 
 # Idea
 .idea
+
+# Blender
+*.blend1
