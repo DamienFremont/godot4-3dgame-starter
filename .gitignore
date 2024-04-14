@@ -14,7 +14,11 @@ export_presets.cfg
 data_*/
 mono_crash.*.json
 
-#  CUSTOM ********************************
+# CUSTOM ********************************
 
+# monorepo
 build
 *.log
+
+# Idea
+.idea
