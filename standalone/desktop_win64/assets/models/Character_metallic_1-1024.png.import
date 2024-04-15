@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://87gc16u8pfey"
-path.s3tc="res://.godot/imported/Character_diffuse_1-1024.png-36853e73f9e72dc64f56211ef3702fe8.s3tc.ctex"
+uid="uid://cu7r2ocno0ur8"
+path.s3tc="res://.godot/imported/Character_metallic_1-1024.png-1c4ae70a757bc1d986743872da36e985.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/models/Character_diffuse_1-1024.png"
-dest_files=["res://.godot/imported/Character_diffuse_1-1024.png-36853e73f9e72dc64f56211ef3702fe8.s3tc.ctex"]
+source_file="res://assets/models/Character_metallic_1-1024.png"
+dest_files=["res://.godot/imported/Character_metallic_1-1024.png-1c4ae70a757bc1d986743872da36e985.s3tc.ctex"]
 
 [params]
 

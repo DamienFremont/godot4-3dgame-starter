@@ -1,6 +1,12 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dxu751rvrqfmw"]
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dxu751rvrqfmw"]
 
-[ext_resource type="Texture2D" uid="uid://87gc16u8pfey" path="res://assets/models/Character_diffuse_1-1024.png" id="1_p1pyl"]
+[ext_resource type="Texture2D" path="res://assets/models/Character_Character_diffuse_1-1024.png" id="1_xjgpc"]
+[ext_resource type="Texture2D" uid="uid://cu7r2ocno0ur8" path="res://assets/models/Character_metallic_1-1024.png" id="2_vdp2e"]
 
 [resource]
-albedo_texture = ExtResource("1_p1pyl")
+albedo_texture = ExtResource("1_xjgpc")
+metallic = 0.5
+metallic_specular = 1.0
+metallic_texture = ExtResource("2_vdp2e")
+metallic_texture_channel = 2
+refraction_scale = 0.9
