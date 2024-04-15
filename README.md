@@ -21,9 +21,9 @@
 
 ## Screenshots
 
-![alt text](./docs/README/screenshot-unreal.jpg)
-
 ![alt text](./docs/README/screenshot-godot.png)
+
+![alt text](./docs/README/screenshot-unreal.jpg)
 
 ![alt text](./docs/README/diagrams-1.png)
 
@@ -101,3 +101,4 @@ Add Godot to classpath
   - [Command line tutorial](https://docs.godotengine.org/en/stable/tutorials/editor/command_line_tutorial.html#exporting)
   - Youtube
     - [Cheap Sky from AI-Generated (or Any Other) Image in 5 Min / Godot Tutorial](https://www.youtube.com/watch?v=ie-D7q7zczY)
+    - [Exporting 3D Models to Godot 4 | GlTF settings](https://www.youtube.com/watch?v=_eIAl_HZWXM)

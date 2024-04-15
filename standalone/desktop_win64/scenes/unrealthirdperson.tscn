@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://djluuvy3rr75r"]
+[gd_scene load_steps=12 format=3 uid="uid://djluuvy3rr75r"]
 
 [ext_resource type="ArrayMesh" uid="uid://bh4ysa1ytgsbd" path="res://assets/models/SM_Cube.obj" id="1_b6tcw"]
 [ext_resource type="Texture2D" uid="uid://dwni3602mpo2k" path="res://assets/images/skybox-panorama.jpg" id="1_eakgw"]
@@ -7,9 +7,7 @@
 [ext_resource type="ArrayMesh" uid="uid://hn7grxn7y7rr" path="res://assets/models/SM_Ramp.obj" id="3_pguqf"]
 [ext_resource type="Material" uid="uid://cchdjprgwwgv" path="res://materials/MI_Grid_Gray.tres" id="5_c3sub"]
 [ext_resource type="Material" uid="uid://c1oardomoukyr" path="res://materials/MI_Grid_TopDark.tres" id="5_jpgsx"]
-[ext_resource type="ArrayMesh" uid="uid://b74vv1l7gf242" path="res://assets/models/Character.obj" id="8_iwtmo"]
-[ext_resource type="Material" uid="uid://cuphsi1oxjcxr" path="res://materials/Character_diffuse_0.tres" id="9_6vykg"]
-[ext_resource type="Material" uid="uid://dxu751rvrqfmw" path="res://materials/Character_diffuse_1.tres" id="10_b66vy"]
+[ext_resource type="PackedScene" uid="uid://dp6u00bte4co8" path="res://assets/models/Character.glb" id="8_x4xqi"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_hrqbg"]
 panorama = ExtResource("1_eakgw")
@@ -180,14 +178,10 @@ skeleton = NodePath("../../..")
 [node name="PlayerStart" type="Node" parent="Node3D"]
 
 [node name="Camera3D" type="Camera3D" parent="Node3D/PlayerStart"]
-transform = Transform3D(-4.33389e-08, 0.130267, -0.991479, 5.69414e-09, 0.991479, 0.130267, 1, 4.44089e-16, -4.37114e-08, 5.37621, 1.5, 11)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.5, 1, 11)
 
-[node name="Character" type="MeshInstance3D" parent="Node3D/PlayerStart"]
+[node name="Character2" parent="Node3D/PlayerStart" instance=ExtResource("8_x4xqi")]
 transform = Transform3D(-4.80825e-08, 0, 1.1, 0, 1.1, 0, -1.1, 0, -4.80825e-08, 9, 0, 11)
-mesh = ExtResource("8_iwtmo")
-skeleton = NodePath("../../..")
-surface_material_override/0 = ExtResource("9_6vykg")
-surface_material_override/1 = ExtResource("10_b66vy")
 
 [node name="SM_Ramp" type="MeshInstance3D" parent="Node3D"]
 transform = Transform3D(-8.74228e-08, 0, -4, 0, 0.3, 0, 2, 0, -1.74846e-07, 17, 0, 6)
