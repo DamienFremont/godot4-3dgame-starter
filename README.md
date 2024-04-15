@@ -102,3 +102,5 @@ Add Godot to classpath
   - Youtube
     - [Cheap Sky from AI-Generated (or Any Other) Image in 5 Min / Godot Tutorial](https://www.youtube.com/watch?v=ie-D7q7zczY)
     - [Exporting 3D Models to Godot 4 | GlTF settings](https://www.youtube.com/watch?v=_eIAl_HZWXM)
+- Resources
+  - [Poly Haven | Skies > Partly Cloudy](https://polyhaven.com/hdris/skies/partly%20cloudy)
