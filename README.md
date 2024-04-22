@@ -1,9 +1,12 @@
-:warning: WORK IN PROGRESS
-==========================
-
 # Goto 4.2 - Game Starter
 
- 2024's small template to start your godotgame. Featuring Unreal ThirdPerson example.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Twitter Follow](https://img.shields.io/twitter/follow/Damien_Fremont?style=social)](https://twitter.com/Damien_Fremont)
+[!["Buy Me A Coffee"](./docs/README/buymeacoffee-20.png)](https://www.buymeacoffee.com/damienfremont)
+
+:warning: **WORK IN PROGRESS !!!**
+
+2024's small template to start your godotgame. Featuring Unreal ThirdPerson example.
 
 <p align="center">
   <img src="./docs/README/thumb-godot.png" height="175" width="auto" />
